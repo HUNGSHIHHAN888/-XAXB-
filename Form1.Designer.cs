@@ -28,67 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            textBox1 = new TextBox();
-            label1 = new Label();
-            listBox1 = new ListBox();
+            userInputTextBox = new TextBox();
+            luckyNumberLabel = new Label();
+            historyListBox = new ListBox();
+            resultLabel = new Label();
+            submitButton = new Button();
             SuspendLayout();
             // 
-            // button1
+            // userInputTextBox
             // 
-            button1.Location = new Point(576, 78);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "檢測";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            userInputTextBox.Location = new Point(726, 226);
+            userInputTextBox.Margin = new Padding(6);
+            userInputTextBox.Name = "userInputTextBox";
+            userInputTextBox.Size = new Size(232, 38);
+            userInputTextBox.TabIndex = 1;
             // 
-            // textBox1
+            // luckyNumberLabel
             // 
-            textBox1.Location = new Point(120, 79);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            luckyNumberLabel.AutoSize = true;
+            luckyNumberLabel.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            luckyNumberLabel.Location = new Point(599, 107);
+            luckyNumberLabel.Margin = new Padding(6, 0, 6, 0);
+            luckyNumberLabel.Name = "luckyNumberLabel";
+            luckyNumberLabel.Size = new Size(483, 41);
+            luckyNumberLabel.TabIndex = 2;
+            luckyNumberLabel.Text = "請輸入不重複的三個數字(0~9) :  ";
             // 
-            // label1
+            // historyListBox
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(347, 159);
-            label1.Name = "label1";
-            label1.Size = new Size(55, 15);
-            label1.TabIndex = 2;
-            label1.Text = "提醒玩家";
+            historyListBox.Font = new Font("Microsoft JhengHei UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            historyListBox.FormattingEnabled = true;
+            historyListBox.ItemHeight = 37;
+            historyListBox.Location = new Point(35, 45);
+            historyListBox.Margin = new Padding(6);
+            historyListBox.Name = "historyListBox";
+            historyListBox.Size = new Size(477, 522);
+            historyListBox.TabIndex = 3;
             // 
-            // listBox1
+            // resultLabel
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(176, 257);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(120, 94);
-            listBox1.TabIndex = 3;
+            resultLabel.AutoSize = true;
+            resultLabel.Font = new Font("Microsoft JhengHei UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            resultLabel.Location = new Point(690, 337);
+            resultLabel.Name = "resultLabel";
+            resultLabel.Size = new Size(0, 35);
+            resultLabel.TabIndex = 4;
+            // 
+            // submitButton
+            // 
+            submitButton.Location = new Point(776, 454);
+            submitButton.Name = "submitButton";
+            submitButton.Size = new Size(150, 46);
+            submitButton.TabIndex = 5;
+            submitButton.Text = "檢測";
+            submitButton.UseVisualStyleBackColor = true;
+            submitButton.Click += button1_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(14F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(listBox1);
-            Controls.Add(label1);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
+            ClientSize = new Size(1158, 625);
+            Controls.Add(submitButton);
+            Controls.Add(resultLabel);
+            Controls.Add(historyListBox);
+            Controls.Add(luckyNumberLabel);
+            Controls.Add(userInputTextBox);
+            Margin = new Padding(6);
             Name = "Form1";
-            Text = "Form1";
+            Text = "XAXB遊戲";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
-        private TextBox textBox1;
-        private Label label1;
-        private ListBox listBox1;
+        private TextBox userInputTextBox;
+        private Label luckyNumberLabel;
+        private ListBox historyListBox;
+        private Label resultLabel;
+        private Button submitButton;
     }
 }
